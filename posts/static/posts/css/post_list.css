@@ -1,0 +1,45 @@
+/* post-list-cards */
+.post-card {
+	min-height: 170px;
+	overflow: hidden;
+}
+
+@media (max-width: 800px) {
+    .post-card {
+        min-height:250px !important;
+		font-size: 15px;
+    }
+	.post-card .card-img {
+		height: 70%;
+	}
+}
+
+.post-card .card-img {
+	height: 100%;
+}
+
+/* Side-Widget cards */
+
+@media (max-width: 800px) {
+    .side-widgets {
+        display:none !important;
+    }
+}
+
+.side-widgets .header {
+	color: grey;
+	font-family: 'Oswald', sans-serif;
+}
+
+.side-card {
+	min-height: 75px;
+	overflow: hidden;
+}
+
+.side-card .card-img {
+	height: 100%;
+}
+
+.side-card h5 {
+	font-size: 19px;
+}

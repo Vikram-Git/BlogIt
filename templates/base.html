@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+
+    <! --{% load staticfiles %} -->
+	
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed:500|Oswald" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+
+    {% block head %}
+    {% endblock %}
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md bg-light py-2">
+		<div class="container">
+
+			<a class="navbar-brand" href="#">NAVBAR</a>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarIcons" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+				<i class="fa fa-bars" aria-hidden="true"></i>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarIcons">
+				{% include 'base_nav_menu.html' %}
+
+				<form class="form-inline my-2 my-lg-0 ml-auto ml-lg-2 navbar-search" action="{% url 'posts:search_query' %}">
+					<input class="form-control search-input " type="search" placeholder="Search..." aria-label="Search" value="{{ request.GET.q }}" name="q">
+				</form>
+			</div>
+		</div>
+	</nav>
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row mt-3">
+            <!-- Main Content -->
+            <div class="col-md-8">
+                {% block body %}
+                {% endblock %}
+            </div>
+            <!-- Sidebar Widgets -->
+            <div class="col-md-4 side-widgets">
+                {% block sidebar %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+{% block script %}
+{% endblock %}
+
+</body>
+</html>

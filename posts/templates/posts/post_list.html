@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}Home{% endblock %}
+
+{% block head %}
+	<link href="{% static 'posts/css/post_list.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block script %}
+	<script src="{% static 'posts/js/post_list.js' %}"></script>
+{% endblock %}
+
+{% block all_post %}active{% endblock %}
+
+{% block body %}
+<!-- Blog Post list-->
+{% for post in posts %}
+	<div class="row post-card no-gutters">
+		<div class="col-md-4">
+			<img class="card-img rounded-0" src="{{ post.cover_thumb.url }}" alt="{{ post.title }}">
+		</div>
+		<div class="col-md-8">
+			<div class="card-block pl-md-3">
+				<a href="{{ post.get_absolute_url }}" class="unstyled-link">
+					<h3>{{ post.title }}</h3>
+				</a>
+				<p>{{ post.content|truncatechars:100|safe }}</p>
+				<span class="mr-3">
+					<i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;{{ post.updated.date }}
+				</span>
+				<span class="mr-3">
+					<i class="fa fa-tag" aria-hidden="true"></i>
+					{% for tag in post.category.all %}
+						<a href="{{ tag.get_absolute_url }}" class="unstyled-link">&nbsp;{{ tag.title }}</a>
+					{% endfor %}
+				</span>
+			</div>
+		</div>
+	</div>
+	<hr/>
+{% endfor %}
+
+<!-- Pagination -->
+<ul class="pagination justify-content-center my-3">
+	{% if posts.has_previous %}
+		<li class="page-item">
+			<a class="page-link" href="?page={{ posts.previous_page_number }}">&larr; Newer</a>
+		</li>
+	{% else%}
+		<li class="page-item disabled">
+			<a class="page-link" href="#">&larr; Newer</a>
+		</li>
+	{% endif %}
+
+	{% if posts.has_next %}
+		<li class="page-item">
+			<a class="page-link" href="?page={{ posts.next_page_number }}">Older &rarr;</a>
+		</li>
+	{% else %}
+		<li class="page-item disabled">
+			<a class="page-link" href="#">Older &rarr;</a>
+		</li>
+	{% endif %}
+</ul>
+
+{% endblock %}
+
+{% block sidebar %}
+	{% include 'posts/trending_posts.html' %}
+{% endblock %}
