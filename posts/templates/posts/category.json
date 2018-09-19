@@ -1,0 +1,12 @@
+{
+    "categoryList": [{% for tag in category %}
+        {
+        "type": "{{ tag.title }}",
+        "url": "{{ tag.get_absolute_url }}"
+        }
+        {% if not forloop.last %}
+            ,
+        {% endif %}
+    {% endfor %}
+    ]
+}

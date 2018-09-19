@@ -5,7 +5,7 @@ from dateutil import relativedelta
 from django.shortcuts import render, get_object_or_404
 from django.http import Http404
 from django.core.paginator import Paginator, InvalidPage
-from .models import Post, Visitor
+from .models import Post, Visitor, Category
 
 from django.db.models import Count, Q
 
@@ -94,3 +94,9 @@ def search_query(request):
     new_posts = Post.objects.filter(publish=True)[:6]
 
     return render(request, 'posts/search.html', {'search_posts': search_posts, 'new_posts': new_posts})
+
+
+def category(request):
+    category = Category.objects.all()
+    return render(request, 'posts/category.json', {'category': category})
+
