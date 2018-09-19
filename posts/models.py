@@ -53,6 +53,9 @@ class Post(TimeStamp):
                                  options={'quality':80})
     content = RichTextUploadingField()
     category = models.ManyToManyField('Category')
+    meta_keywords = models.CharField(max_length=120,
+                                     help_text='Keywords should be separated by commas.')
+    meta_description = models.TextField(max_length=300, null=True)
     publish = models.BooleanField(default=False)
 
     def __str__(self):
