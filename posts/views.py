@@ -1,4 +1,5 @@
-import datetime, pprint
+import datetime
+
 from dateutil import relativedelta
 
 from django.shortcuts import render, get_object_or_404
@@ -10,7 +11,6 @@ from django.db.models import Count, Q
 
 
 def post_list(request):
-    print(request.get_host())
     published_post = Post.objects.filter(publish=True)
 
     paginator = Paginator(published_post, 8)
