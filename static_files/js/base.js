@@ -8,7 +8,7 @@ function getCategory(){
         success: function(response){
             $.each(response.categoryList, function(index, category){
                 var menu = "<a href='" + category.url + "'>" + category.type + "</a>"
-                var menuDiv = "<div class='col-md-4'>" + menu + "</div>"
+                var menuDiv = "<div class='col-sm-4'>" + menu + "</div>"
                 $('.my-menu').append(menuDiv);
             });
         },
