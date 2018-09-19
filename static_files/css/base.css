@@ -69,7 +69,7 @@ body {
 }
 
 .custom-menu {
-    width: 260px;
+    min-width: 280px;
     overflow: hidden;
 }
 
