@@ -43,14 +43,9 @@ def post_detail(request, post_slug):
     new_posts = Post.objects.filter(publish=True) \
                     .exclude(slug__icontains=post_slug)[:6]
 
-    # related post algorithm
-    tags = [category for category in this_post.category.all()]
-    related_posts = Post.objects.filter(category__in=tags) \
-                        .exclude(slug__icontains=post_slug)[:6]
 
     context = {'this_post': this_post,
                'new_posts': new_posts,
-               'related_posts': related_posts
                }
     return render(request, 'posts/post_details.html', context)
 

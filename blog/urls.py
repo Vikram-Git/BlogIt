@@ -7,6 +7,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     re_path('^admin/', admin.site.urls),
+    re_path('^$', views.post_redirect),
     re_path('^posts/', include('posts.urls', namespace='posts')),
     re_path(r'^ckeditor/', include('ckeditor_uploader.urls')),
 ]

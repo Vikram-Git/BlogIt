@@ -6,7 +6,6 @@ app_name = 'posts'
 urlpatterns = [
 
     re_path(r'^$', views.post_list, name='post_list'),
-    # re_path(r'^post_api/(?P<page_no>[0-9]+)/$', views.post_list_json, name='post_api'),
     re_path(r'^category/$', views.category, name='category'),
     re_path(r'^trending/$', views.trending_post, name='trending_post'),
     re_path(r'^search/$', views.search_query, name='search_query'),

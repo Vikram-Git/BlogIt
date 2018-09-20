@@ -12,7 +12,9 @@
         </div>
         <div class="col-md-8">
             <div class="card-block pl-md-2">
-                <h5>{{ post.title }}</h5>
+                <a href="{{ post.get_absolute_url }}" class="unstyled-link">
+					<h5>{{ post.title }}</h5>
+				</a>
             </div>
         </div>
     </div>
