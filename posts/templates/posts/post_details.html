@@ -1,6 +1,15 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 
+{% block meta %}
+<meta name="description" content="{{ this_post.meta_description }}">
+<meta name="keywords" content="{{ this_post.meta_keywords }}"/>
+<meta name="author" content="{{ this_post.author }}">
+{% for tag in this_post.category.all %}
+  	<meta property="article:tag" content="{{ tag.title }}" />
+{% endfor %}
+{% endblock %}
+
 {% block title %}
 {{ this_post.title }}
 {% endblock %}
