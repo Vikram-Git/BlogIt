@@ -13,7 +13,7 @@ from django.db.models import Count, Q
 def post_list(request):
     published_post = Post.objects.filter(publish=True)
 
-    paginator = Paginator(published_post, 8)
+    paginator = Paginator(published_post, 5)
     page = request.GET.get('page')
     posts = paginator.get_page(page)
     
