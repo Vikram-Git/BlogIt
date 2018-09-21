@@ -14,7 +14,7 @@
 {% block body %}
 <!-- Blog Post list-->
 {% for post in posts %}
-	<div class="row post-card no-gutters">
+	<div class="row post-card no-gutters mb-3">
 		<div class="col-md-4">
 			<img class="card-img rounded-0" src="{{ post.cover_thumb.url }}" alt="{{ post.title }}">
 		</div>
@@ -36,7 +36,6 @@
 			</div>
 		</div>
 	</div>
-	<hr/>
 {% endfor %}
 
 <!-- Pagination -->
