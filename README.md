@@ -2,12 +2,11 @@
 BlogIt is a simple blog app built using django.
 
 # Installation 
------
 
 1. Clone this project
 
 ```
-git clone "https://github.com/Vikram-Git/Assignment/"
+git clone "https://github.com/Vikram-Git/BlogIt.git"
 ```
 
 2. Install requirements
