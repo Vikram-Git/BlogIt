@@ -1,7 +1,7 @@
 # BlogIt
 BlogIt is a simple blog app built using django 2.0.
 
-# Features 
+## Features 
 
 * Django CKEditor
 * Facebook Plugin For Comments
@@ -11,7 +11,7 @@ BlogIt is a simple blog app built using django 2.0.
 * Display Posts Under Different Categories
 * Search Posts
 
-# Installation 
+## Installation 
 
 1. Clone this project
 
