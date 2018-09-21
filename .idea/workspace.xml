@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="56039d84-3687-47d4-8d68-2ac9e29aeeb8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/posts/templates/posts/category_list.html" afterPath="$PROJECT_DIR$/posts/templates/posts/category_list.html" />
-      <change beforePath="$PROJECT_DIR$/posts/templates/posts/newest_posts.html" afterPath="$PROJECT_DIR$/posts/templates/posts/newest_posts.html" />
-      <change beforePath="$PROJECT_DIR$/posts/templates/posts/post_list.html" afterPath="$PROJECT_DIR$/posts/templates/posts/post_list.html" />
-      <change beforePath="$PROJECT_DIR$/posts/templates/posts/search.html" afterPath="$PROJECT_DIR$/posts/templates/posts/search.html" />
-      <change beforePath="$PROJECT_DIR$/posts/templates/posts/trending_list.html" afterPath="$PROJECT_DIR$/posts/templates/posts/trending_list.html" />
-      <change beforePath="$PROJECT_DIR$/posts/templates/posts/trending_posts.html" afterPath="$PROJECT_DIR$/posts/templates/posts/trending_posts.html" />
-    </list>
+    <list default="true" id="56039d84-3687-47d4-8d68-2ac9e29aeeb8" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -183,7 +176,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-12" />
     <option name="y" value="48" />
     <option name="width" value="1340" />
@@ -284,7 +277,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1532738" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
